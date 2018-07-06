@@ -37,6 +37,10 @@ public:
     float readChannelB();
     float readChannel(Channel_e ch);
 
+    float averageChannelA(uint8_t averageFactor = 16);
+    float averageChannelB(uint8_t averageFactor = 16);
+    float averageChannel(Channel_e ch, uint8_t averageFactor = 16);
+
 private:
 
     void _setReadingChannel(Channel_e ch);

@@ -198,3 +198,39 @@ float HX711Dual::readChannel(Channel_e ch)
 
     return v / gain;
 }
+
+float averageChannelA(uint8_t averageFactor = 16)
+{
+  float ret;
+
+  for (uint8_t i = 0; i < averageFactor; i++)
+  {
+    ret += readChannelA();
+  }
+
+  return (ret / averageFactor);
+}
+
+float averageChannelB(uint8_t averageFactor = 16)
+{
+  float ret;
+
+  for (uint8_t i = 0; i < averageFactor; i++)
+  {
+    ret += readChannelB();
+  }
+
+  return (ret / averageFactor);
+}
+
+float averageChannel(Channel_e ch, uint8_t averageFactor = 16)
+{
+  float ret;
+
+  for (uint8_t i = 0; i < averageFactor; i++)
+  {
+    ret += readChannel(ch);
+  }
+
+  return (ret / averageFactor);
+}

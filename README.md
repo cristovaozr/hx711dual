@@ -9,5 +9,5 @@ Arduino library (class) for reading both channels on HX711
 ## TO-DO
 The following features are missing in the library:
 
-  * Averaged values when reading channels
-  * Doxygen documentation
+  * [x] Averaged values when reading channels
+  * [ ] Doxygen documentation
